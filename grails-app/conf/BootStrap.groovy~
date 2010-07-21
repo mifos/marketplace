@@ -1,0 +1,10 @@
+class BootStrap {
+
+    def init = { servletContext ->
+        // Create some test data
+        new marketplace.Book(author:"Stephen King",title:"The Shining").save()
+        new marketplace.Book(author:"James Patterson",title:"Along Came a Spider").save()
+    }
+    def destroy = {
+    }
+}

@@ -1,0 +1,7 @@
+package marketplace
+
+class InvestorDashboard {
+
+    static constraints = {
+    }
+}

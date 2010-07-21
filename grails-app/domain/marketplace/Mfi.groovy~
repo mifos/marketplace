@@ -1,0 +1,7 @@
+package marketplace
+
+class Mfi {
+  Long activeBorrowers
+  java.math.BigDecimal grossLoanPortfolio
+  java.math.BigDecimal par30
+}

@@ -1,0 +1,6 @@
+package marketplace
+
+class InvestorDashboardController {
+
+    def index = { }
+}
