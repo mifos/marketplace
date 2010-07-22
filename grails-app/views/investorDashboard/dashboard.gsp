@@ -17,10 +17,11 @@
    </div>
 
 <div class="portfolio">
-<h2>Portfolio:</h2>
+<h2>Your Portfolio:</h2>
 <table>
 <tr>
   <th>MFI Name</th>
+  <th># Clients</th>
   <th>Gross Loan Portfolio</th>
   <th>TIM Write Offs</th>
   <th>OSS</th>
@@ -31,6 +32,7 @@
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
+    <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
     <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
     <td>${mfi.oss?.encodeAsHTML()}</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
@@ -45,6 +47,7 @@
 <table>
 <tr>
   <th>MFI Name</th>
+  <th># Clients</th>
   <th>Gross Loan Portfolio</th>
   <th>TIM Write Offs</th>
   <th>OSS</th>
@@ -55,6 +58,7 @@
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
+    <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
     <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
     <td>${mfi.oss?.encodeAsHTML()}</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
