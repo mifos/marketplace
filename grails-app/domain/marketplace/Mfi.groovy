@@ -2,7 +2,10 @@ package marketplace
 
 class Mfi {
   String Name
-  Long activeBorrowers
-  //BigDecimal grossLoanPortfolio
-  java.math.BigDecimal par30
+  Long numberOfClients
+  BigDecimal par30
+  BigDecimal grossLoanPortfolio
+  BigDecimal timWriteOffs
+  BigDecimal oss
+  BigDecimal debtEquityRatio
 }
