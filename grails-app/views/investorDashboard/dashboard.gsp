@@ -47,12 +47,12 @@
 <g:each in="${portfolioMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
-    <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
-    <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
+    <td><g:formatNumber number="${mfi.numberOfClients}" format="###,###,###" /></td>
+    <td><g:formatNumber number="${mfi.grossLoanPortfolio}" format="\$###,###,###" /></td>
     <td>${mfi.par30?.encodeAsHTML()}%</td>
     <td>&nbsp;</td>
-    <td>${mfi.lastQuarterNumberOfClients?.encodeAsHTML()}</td>
-    <td>${mfi.lastQuarterGrossLoanPortfolio?.encodeAsHTML()}</td>
+    <td><g:formatNumber number="${mfi.lastQuarterNumberOfClients}" format="###,###,###" /></td>
+    <td><g:formatNumber number="${mfi.lastQuarterGrossLoanPortfolio}" format="\$###,###,###" /></td>
     <td>${mfi.timWriteOffs?.encodeAsHTML()}%</td>
     <td>${mfi.oss?.encodeAsHTML()}%</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
@@ -82,8 +82,8 @@
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
-    <td>${mfi.lastQuarterGrossLoanPortfolio?.encodeAsHTML()}</td>
-    <td>${mfi.timWriteOffs?.encodeAsHTML()}%</td>
+    <td><g:formatNumber number="${mfi.lastQuarterNumberOfClients}" format="###,###,###" /></td>
+    <td><g:formatNumber number="${mfi.lastQuarterGrossLoanPortfolio}" format="\$###,###,###" /></td>
     <td>${mfi.oss?.encodeAsHTML()}%</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
     <td>${mfi.lastQuarterPar30?.encodeAsHTML()}%</td>
