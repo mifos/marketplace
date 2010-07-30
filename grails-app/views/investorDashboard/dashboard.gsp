@@ -20,9 +20,16 @@
 <h2>Your Portfolio:</h2>
 <table>
 <tr>
+  <th></th>
+  <th colspan="2" style="background-color: #c7c7c7">As of today's date</th>
+  <th>&nbsp;</th>
+  <th colspan="4"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
+</tr>
+<tr>
   <th>MFI Name</th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
+  <th>&nbsp;</th>
   <th>TIM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
@@ -33,6 +40,7 @@
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
     <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
+    <td>&nbsp;</td>
     <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
     <td>${mfi.oss?.encodeAsHTML()}</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
