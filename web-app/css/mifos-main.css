@@ -558,6 +558,22 @@ url(pages/framework/images/buttons/buttonbgcancel.jpg);
         text-decoration: none;
 }
 
+.dashboard-table {
+        text-align: right;
+}
+
+.dashboard-table-text {
+        text-align: left;
+}
+
+.dashboard-table a {
+        font-size: 12pt;
+}
+
+.dashboard-table-header-dark {
+        text-align: left;
+        background-color: #c7c7c7;
+}
 .top-taborange {
 	padding-left: 15px;
 	padding-top: 5px;

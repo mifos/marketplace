@@ -24,12 +24,12 @@
 
 <div class="portfolio">
 <h2>Your Portfolio:</h2>
-<table>
+<table class="dashboard-table">
 <tr>
   <th></th>
-  <th colspan="3" style="background-color: #c7c7c7">As of today's date</th>
+  <th colspan="3" class="dashboard-table-header-dark">As of today's date</th>
   <th>&nbsp;</th>
-  <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
+  <th colspan="6" class="dashboard-table-header-dark">As of last quarter: 30-June-2010</th>
 </tr>
 <tr>
   <th></th>
@@ -39,24 +39,24 @@
   <th>&nbsp;</th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
-  <th>TIM Write Offs</th>
+  <th>TTM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
   <th>Par>30</th>
 </tr>
 <g:each in="${portfolioMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-    <td>${mfi.name?.encodeAsHTML()}</td>
+    <td class="dashboard-table-text"><a href="#">${mfi.name?.encodeAsHTML()}</a></td>
     <td><g:formatNumber number="${mfi.numberOfClients}" format="###,###,###" /></td>
     <td><g:formatNumber number="${mfi.grossLoanPortfolio}" format="\$###,###,###" /></td>
     <td>${mfi.par30?.encodeAsHTML()}%</td>
     <td>&nbsp;</td>
     <td><g:formatNumber number="${mfi.lastQuarterNumberOfClients}" format="###,###,###" /></td>
     <td><g:formatNumber number="${mfi.lastQuarterGrossLoanPortfolio}" format="\$###,###,###" /></td>
-    <td>${mfi.timWriteOffs?.encodeAsHTML()}%</td>
+    <td>${mfi.ttmWriteOffs?.encodeAsHTML()}%</td>
     <td>${mfi.oss?.encodeAsHTML()}%</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
-    <td>${mfi.par30?.encodeAsHTML()}%</td>
+    <td>${mfi.lastQuarterPar30?.encodeAsHTML()}%</td>
   </tr>
 </g:each>
 </table>
@@ -64,26 +64,26 @@
 
 <div class="other-mfis">
 <h2>Other Mifos MFIs:</h2>
-<table>
+<table class="dashboard-table">
 <tr>
   <th></th>
-  <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
+  <th colspan="6" class="dashboard-table-header-dark">As of last quarter: 30-June-2010</th>
 </tr>
 <tr>
   <th></th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
-  <th>TIM Write Offs</th>
+  <th>TTM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
   <th>Par>30</th>
 </tr>
 <g:each in="${otherMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-    <td>${mfi.name?.encodeAsHTML()}</td>
-    <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
+    <td class="dashboard-table-text"><a href="#">${mfi.name?.encodeAsHTML()}</a></td>
     <td><g:formatNumber number="${mfi.lastQuarterNumberOfClients}" format="###,###,###" /></td>
     <td><g:formatNumber number="${mfi.lastQuarterGrossLoanPortfolio}" format="\$###,###,###" /></td>
+    <td>${mfi.ttmWriteOffs?.encodeAsHTML()}%</td>
     <td>${mfi.oss?.encodeAsHTML()}%</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
     <td>${mfi.lastQuarterPar30?.encodeAsHTML()}%</td>
@@ -94,5 +94,9 @@
 
 </div>
 
+<!-- commas in dec, 2.51 par, make MFI names links to # -->
+
 </body>
 </html>
+
+

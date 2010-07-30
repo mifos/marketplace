@@ -7,7 +7,7 @@ class Mfi {
   BigDecimal par30
   Long lastQuarterNumberOfClients
   BigDecimal lastQuarterGrossLoanPortfolio
-  BigDecimal timWriteOffs
+  BigDecimal ttmWriteOffs
   BigDecimal oss
   BigDecimal debtEquityRatio
   BigDecimal lastQuarterPar30
