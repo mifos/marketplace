@@ -8,7 +8,13 @@
 
 <div class="container">
       <div class="logo"/></div>
-      <div class="orangeline" style="margin-top: 80px;">&nbsp</div>
+      <div class="top-tab-bar">
+        <ul>
+           <li class="top-tablightorange">Home</li>
+           <li class="top-taborange">Data Analysis</li>
+         </ul>
+       </div>
+       <div class="top-orangeline">&nbsp</div>
    <div>
 
    <div class="header-div">
@@ -26,7 +32,7 @@
   <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
 </tr>
 <tr>
-  <th>MFI Name</th>
+  <th></th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
   <th>Par>30</th>
@@ -64,7 +70,7 @@
   <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
 </tr>
 <tr>
-  <th>MFI Name</th>
+  <th></th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
   <th>TIM Write Offs</th>
@@ -77,10 +83,10 @@
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
     <td>${mfi.lastQuarterGrossLoanPortfolio?.encodeAsHTML()}</td>
-    <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
-    <td>${mfi.oss?.encodeAsHTML()}</td>
-    <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
-    <td>${mfi.lastQuarterPar30?.encodeAsHTML()}</td>
+    <td>${mfi.timWriteOffs?.encodeAsHTML()}%</td>
+    <td>${mfi.oss?.encodeAsHTML()}%</td>
+    <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
+    <td>${mfi.lastQuarterPar30?.encodeAsHTML()}%</td>
   </tr>
 </g:each>
 </table>
