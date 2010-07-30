@@ -21,30 +21,36 @@
 <table>
 <tr>
   <th></th>
-  <th colspan="2" style="background-color: #c7c7c7">As of today's date</th>
+  <th colspan="3" style="background-color: #c7c7c7">As of today's date</th>
   <th>&nbsp;</th>
-  <th colspan="4"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
+  <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
 </tr>
 <tr>
   <th>MFI Name</th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
+  <th>Par>30</th>
   <th>&nbsp;</th>
+  <th># Clients</th>
+  <th>Gross Loan Portfolio</th>
   <th>TIM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
   <th>Par>30</th>
 </tr>
-<g:each in="${portfolio}" status="i" var="mfi">
+<g:each in="${portfolioMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
     <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
+    <td>${mfi.par30?.encodeAsHTML()}%</td>
     <td>&nbsp;</td>
-    <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
-    <td>${mfi.oss?.encodeAsHTML()}</td>
-    <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
-    <td>${mfi.par30?.encodeAsHTML()}</td>
+    <td>${mfi.lastQuarterNumberOfClients?.encodeAsHTML()}</td>
+    <td>${mfi.lastQuarterGrossLoanPortfolio?.encodeAsHTML()}</td>
+    <td>${mfi.timWriteOffs?.encodeAsHTML()}%</td>
+    <td>${mfi.oss?.encodeAsHTML()}%</td>
+    <td>${mfi.debtEquityRatio?.encodeAsHTML()}%</td>
+    <td>${mfi.par30?.encodeAsHTML()}%</td>
   </tr>
 </g:each>
 </table>
@@ -54,6 +60,10 @@
 <h2>Other Mifos MFIs:</h2>
 <table>
 <tr>
+  <th></th>
+  <th colspan="6"  style="background-color: #c7c7c7">As of last quarter: 30-June-2010</th>
+</tr>
+<tr>
   <th>MFI Name</th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
@@ -62,15 +72,15 @@
   <th>D/E</th>
   <th>Par>30</th>
 </tr>
-<g:each in="${portfolio}" status="i" var="mfi">
+<g:each in="${otherMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
     <td>${mfi.name?.encodeAsHTML()}</td>
     <td>${mfi.numberOfClients?.encodeAsHTML()}</td>
-    <td>${mfi.grossLoanPortfolio?.encodeAsHTML()}</td>
+    <td>${mfi.lastQuarterGrossLoanPortfolio?.encodeAsHTML()}</td>
     <td>${mfi.timWriteOffs?.encodeAsHTML()}</td>
     <td>${mfi.oss?.encodeAsHTML()}</td>
     <td>${mfi.debtEquityRatio?.encodeAsHTML()}</td>
-    <td>${mfi.par30?.encodeAsHTML()}</td>
+    <td>${mfi.lastQuarterPar30?.encodeAsHTML()}</td>
   </tr>
 </g:each>
 </table>

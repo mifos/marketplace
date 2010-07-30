@@ -5,7 +5,7 @@ class InvestorDashboardController {
    def scaffold = InvestorDashboard
 
    def dashboard = {
-     [ dashboard : InvestorDashboard.get(1), portfolio : Mfi.findAll() ] 
+     [ dashboard : InvestorDashboard.get(1), portfolioMfis : PortfolioMfi.findAll(), otherMfis : OtherMfi.findAll() ] 
    } 
 
    def test = {
