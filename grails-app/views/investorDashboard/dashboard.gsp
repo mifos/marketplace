@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Mifos Investor Dashboard</title>
+<title><g:message code="investorDashboard.dashboard.title"/></title>
 <link type="text/css" rel="stylesheet" href="/marketplace/css/mifos-main.css"/>
 <link type="text/css" rel="stylesheet" href="/marketplace/css/mifos-screen.css"/>
 </head>
@@ -10,39 +10,39 @@
       <div class="logo"/></div>
       <div class="top-tab-bar">
         <ul>
-           <li class="top-tablightorange">Home</li>
-           <li class="top-taborange">Data Analysis</li>
+           <li class="top-tablightorange"><g:message code="investorDashboard.nav.home"/></li>
+           <li class="top-taborange"><g:message code="investorDashboard.nav.dataAnalysis"/></li>
          </ul>
        </div>
        <div class="top-orangeline">&nbsp;</div>
    <div>
 
    <div class="header-div">
-      Welcome, ${dashboard.investorName}!<br/>
-      The last time you logged in was ${dashboard.lastLogin}<br/>
+      <g:message code="investorDashboard.dashboard.welcome" args="${[dashboard.investorName]}"/><br/>
+      <g:message code="investorDashboard.dashboard.lastLoginTime" args="${[dashboard.lastLogin]}"/><br/>
    </div>
 
 <div class="portfolio">
-<h2>Your Portfolio:</h2>
+<h2><g:message code="investorDashboard.dashboard.yourPortfolio"/></h2>
 <table class="dashboard-table">
 <tr>
   <th></th>
-  <th colspan="3" class="dashboard-table-header-dark">As of today's date</th>
+  <th colspan="3" class="dashboard-table-header-dark"><g:message code="investorDashboard.dashboard.asOfToday"/></th>
   <th>&nbsp;</th>
-  <th colspan="6" class="dashboard-table-header-dark">As of last quarter: 30-June-2010</th>
+  <th colspan="6" class="dashboard-table-header-dark"><g:message code="investorDashboard.dashboard.asOfLastQuarter" args="${['30-June-2010']}"/></th>
 </tr>
 <tr>
   <th></th>
-  <th># Clients</th>
-  <th>Gross Loan Portfolio</th>
-  <th>Par&gt;30</th>
+  <th><g:message code="investorDashboard.dashboard.numberOfClients"/></th>
+  <th><g:message code="investorDashboard.dashboard.grossLoanPortfolio"/></th>
+  <th><g:message code="investorDashboard.dashboard.parGreaterThan30"/></th>
   <th>&nbsp;</th>
-  <th># Clients</th>
-  <th>Gross Loan Portfolio</th>
-  <th>TTM Write Offs</th>
-  <th>OSS</th>
-  <th>D/E</th>
-  <th>Par&gt;30</th>
+  <th><g:message code="investorDashboard.dashboard.numberOfClients"/></th>
+  <th><g:message code="investorDashboard.dashboard.grossLoanPortfolio"/></th>
+  <th><g:message code="investorDashboard.dashboard.ttmWriteOffs"/></th>
+  <th><g:message code="investorDashboard.dashboard.oss"/></th>
+  <th><g:message code="investorDashboard.dashboard.debtEquityRatio"/></th>
+  <th><g:message code="investorDashboard.dashboard.parGreaterThan30"/></th>
 </tr>
 <g:each in="${portfolioMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
@@ -63,20 +63,20 @@
 </div>
 
 <div class="other-mfis">
-<h2>Other Mifos MFIs:</h2>
+<h2><g:message code="investorDashboard.dashboard.otherMifosMfis"/></h2>
 <table class="dashboard-table">
 <tr>
   <th></th>
-  <th colspan="6" class="dashboard-table-header-dark">As of last quarter: 30-June-2010</th>
+  <th colspan="6" class="dashboard-table-header-dark"><g:message code="investorDashboard.dashboard.asOfLastQuarter" args="${['30-June-2010']}"/></th>
 </tr>
 <tr>
   <th></th>
-  <th># Clients</th>
-  <th>Gross Loan Portfolio</th>
-  <th>TTM Write Offs</th>
-  <th>OSS</th>
-  <th>D/E</th>
-  <th>Par&gt;30</th>
+  <th><g:message code="investorDashboard.dashboard.numberOfClients"/></th>
+  <th><g:message code="investorDashboard.dashboard.grossLoanPortfolio"/></th>
+  <th><g:message code="investorDashboard.dashboard.ttmWriteOffs"/></th>
+  <th><g:message code="investorDashboard.dashboard.oss"/></th>
+  <th><g:message code="investorDashboard.dashboard.debtEquityRatio"/></th>
+  <th><g:message code="investorDashboard.dashboard.parGreaterThan30"/></th>
 </tr>
 <g:each in="${otherMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
