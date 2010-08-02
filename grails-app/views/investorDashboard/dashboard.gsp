@@ -14,7 +14,7 @@
            <li class="top-taborange">Data Analysis</li>
          </ul>
        </div>
-       <div class="top-orangeline">&nbsp</div>
+       <div class="top-orangeline">&nbsp;</div>
    <div>
 
    <div class="header-div">
@@ -35,14 +35,14 @@
   <th></th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
-  <th>Par>30</th>
+  <th>Par&gt;30</th>
   <th>&nbsp;</th>
   <th># Clients</th>
   <th>Gross Loan Portfolio</th>
   <th>TTM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
-  <th>Par>30</th>
+  <th>Par&gt;30</th>
 </tr>
 <g:each in="${portfolioMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
@@ -76,7 +76,7 @@
   <th>TTM Write Offs</th>
   <th>OSS</th>
   <th>D/E</th>
-  <th>Par>30</th>
+  <th>Par&gt;30</th>
 </tr>
 <g:each in="${otherMfis}" status="i" var="mfi">
   <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
